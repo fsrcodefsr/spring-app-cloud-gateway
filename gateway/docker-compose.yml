@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+
+  gateway:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: gateway:1.0
+    container_name: gateway
+    environment:
+      - SPRING_PROFILES_ACTIVE=${PROFILE}
+      - GATEWAY_PORT=${GATEWAY_PORT}
+      - INTERNAL_PORT=${GATEWAY_PORT}
+    ports:
+      - "${GATEWAY_PORT}:${GATEWAY_PORT}"
+    networks:
+      - my-network
+
+networks:
+  my-network:
+    external: true
