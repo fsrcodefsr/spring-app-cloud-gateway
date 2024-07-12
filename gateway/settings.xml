@@ -3,7 +3,7 @@
         <mirror>
             <id>nexus</id>
             <mirrorOf>*</mirrorOf>
-            <url>http://172.17.0.1:8081/repository/maven-public/</url>
+            <url>http://172.17.0.1:8800/repository/maven-public/</url>
         </mirror>
     </mirrors>
     <profiles>
