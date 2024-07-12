@@ -8,6 +8,7 @@ services:
       dockerfile: Dockerfile
     image: gateway:1.0
     container_name: gateway
+    restart: always
     environment:
       - SPRING_PROFILES_ACTIVE=${PROFILE}
       - GATEWAY_PORT=${GATEWAY_PORT}
